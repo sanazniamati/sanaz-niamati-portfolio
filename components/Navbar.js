@@ -1,9 +1,16 @@
 // library
 import Link from "next/link";
 import { useRouter } from "next/router";
+import { motion } from "framer-motion";
 
 // components
 import Logo from "../components/Logo";
+import {
+  TwitterIcon,
+  LinkedInIcon,
+  GithubIcon,
+  PinterestIcon,
+} from "../components/Icons";
 
 const CustomLink = ({ href, title, className = "" }) => {
   const router = useRouter();
@@ -31,25 +38,45 @@ function Navbar(props) {
         <CustomLink href="/articles" title={"Articles"} className="ml-4" />
       </nav>
 
-      <nav>
-        <Link href="/" target="_blank">
-          T
-        </Link>
-        <Link href="/" target="_blank">
-          T
-        </Link>
+      <nav className="flex justify-center items-center flex-wrap">
+        <motion.a
+          href="https://twitter.com"
+          target="_blank"
+          whileHover={{ y: -2 }}
+          whileTap={{ scale: 0.9 }}
+          className="w-6 mr-3"
+        >
+          <TwitterIcon />
+        </motion.a>
+        <motion.a
+          href="https://twitter.com"
+          target="_blank"
+          whileHover={{ y: -2 }}
+          whileTap={{ scale: 0.9 }}
+          className="w-6 mx-3"
+        >
+          <LinkedInIcon />
+        </motion.a>
 
-        <Link href="/" target="_blank">
-          T
-        </Link>
+        <motion.a
+          href="https://twitter.com"
+          target="_blank"
+          whileHover={{ y: -2 }}
+          whileTap={{ scale: 0.9 }}
+          className="w-6 mx-3"
+        >
+          <GithubIcon />
+        </motion.a>
 
-        <Link href="/" target="_blank">
-          T
-        </Link>
-
-        <Link href="/" target="_blank">
-          T
-        </Link>
+        <motion.a
+          href="https://twitter.com"
+          target="_blank"
+          whileHover={{ y: -2 }}
+          whileTap={{ scale: 0.9 }}
+          className="w-6 ml-3"
+        >
+          <PinterestIcon />
+        </motion.a>
       </nav>
       <div className=" absolute left-[50%] top-2 translate-x-[-50%]">
         <Logo />
