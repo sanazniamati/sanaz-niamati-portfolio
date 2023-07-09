@@ -17,6 +17,10 @@ module.exports = {
         primary: "#B63E96", //240,86,199
         primaryDark: "#58E6D9", //80,230,217
       },
+      minHeight: {
+        // "calc-22": "calc(100vh - 88px)",
+        "calc-(100vh-(footer-header))": "calc(100vh - 87px)",
+      },
     },
   },
   plugins: [],
