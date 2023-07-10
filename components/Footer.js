@@ -4,8 +4,8 @@ import Link from "next/link";
 
 function Footer(props) {
   return (
-    <footer className=" h-[76px] w-full border-t-2 border-solid border-dark font-medium text-lg">
-      <Layout className="py-2 flex items-center justify-between">
+    <footer className="bg-light w-full font-medium text-lg">
+      <div className=" w-full  h-[58px]  z-0  px-32 flex items-center justify-between">
         <span>{new Date().getFullYear()}&copy;All Right Reserved</span>
         <div className="flex items-center">
           Build with
@@ -17,7 +17,7 @@ function Footer(props) {
         <Link href="/" target={"_blank"}>
           say Hello
         </Link>
-      </Layout>
+      </div>
     </footer>
   );
 }

@@ -14,12 +14,14 @@ module.exports = {
       colors: {
         dark: "#1b1b1b",
         light: "#f5f5f5",
+        green: "#93E3AB",
+        blue: "#4ea074",
         primary: "#B63E96", //240,86,199
         primaryDark: "#58E6D9", //80,230,217
       },
       minHeight: {
-        // "calc-22": "calc(100vh - 88px)",
-        "calc-(100vh-(footer-header))": "calc(100vh - 87px)",
+        "calc-22": "calc(100vh - 116px)",
+        "calc-(100vh-(footer-header))": "calc(100vh -116px)",
       },
     },
   },

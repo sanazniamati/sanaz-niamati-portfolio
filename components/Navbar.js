@@ -5,21 +5,16 @@ import { motion } from "framer-motion";
 
 // components
 import Logo from "../components/Logo";
-import {
-  TwitterIcon,
-  LinkedInIcon,
-  GithubIcon,
-  PinterestIcon,
-} from "../components/Icons";
+import { LinkedInIcon, GithubIcon, SunIcon } from "../components/Icons";
 
 const CustomLink = ({ href, title, className = "" }) => {
   const router = useRouter();
   return (
-    <Link href={href} className={`${className} relative group`}>
+    <Link href={href} className={`${className} p-2 relative group`}>
       {title}
       <span
-        className={`h-[1px]  bg-dark inline-block absolute left-0 -bottom-0.5 
-      group-hover:w-full transition-[width] ease duration-300
+        className={`h-[2px]  bg-green inline-block absolute left-0 -bottom-0.5 
+      group-hover:w-full group-hover:bg-green transition-[width] ease duration-300
       ${router.asPath === href ? "w-full" : "w-0"}`}
       >
         &nbsp;
@@ -30,7 +25,7 @@ const CustomLink = ({ href, title, className = "" }) => {
 
 function Navbar() {
   return (
-    <header className=" h-[48px] w-full px-32 py-2  font-medium flex justify-between items-center">
+    <header className="w-full px-32 h-[56px]  font-medium flex justify-between items-center">
       <nav>
         <CustomLink href="/" title={"Home"} className="mr-4" />
         <CustomLink href="/about" title={"About"} className="mx-4" />
@@ -39,7 +34,7 @@ function Navbar() {
       </nav>
 
       <nav className="flex justify-center items-center flex-wrap">
-        <motion.a
+        {/* <motion.a
           href="https://twitter.com"
           target="_blank"
           whileHover={{ y: -2 }}
@@ -47,9 +42,9 @@ function Navbar() {
           className="w-6 mr-3"
         >
           <TwitterIcon />
-        </motion.a>
+        </motion.a> */}
         <motion.a
-          href="https://twitter.com"
+          href="https://www.linkedin.com/in/sanaz-niamati/"
           target="_blank"
           whileHover={{ y: -2 }}
           whileTap={{ scale: 0.9 }}
@@ -59,7 +54,7 @@ function Navbar() {
         </motion.a>
 
         <motion.a
-          href="https://twitter.com"
+          href="https://github.com/sanazniamati"
           target="_blank"
           whileHover={{ y: -2 }}
           whileTap={{ scale: 0.9 }}
@@ -69,13 +64,13 @@ function Navbar() {
         </motion.a>
 
         <motion.a
-          href="https://twitter.com"
+          href="/"
           target="_blank"
           whileHover={{ y: -2 }}
           whileTap={{ scale: 0.9 }}
           className="w-6 ml-3"
         >
-          <PinterestIcon />
+          <SunIcon />
         </motion.a>
       </nav>
       {/* <div className=" absolute left-[50%] top-2 translate-x-[-50%]">
