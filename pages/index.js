@@ -33,6 +33,7 @@ export default function Home() {
                   text={"Hey , i'm sanaz niamati"}
                   className="!text-6xl !text-left"
                 />
+
                 <p className="my-4 text-base font-medium">
                   A Frontend focused Web Developer building the Frontend of
                   Websites and Web Applications that leads to the success of the

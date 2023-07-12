@@ -3,6 +3,7 @@ import Image from "next/image";
 // component
 import Layout from "../components/Layout.js";
 import AnimatedText from "../components/AnimatedText";
+import Skills from "../components/Skills.js";
 // image
 import profile from "../public/sanaz.jpeg";
 
@@ -17,7 +18,7 @@ function about(props) {
         <Layout className="pt-8 bg-white">
           <div className="grid w-full grid-cols-6 gap-16">
             <div className=" col-span-3 flex flex-col items-center justify-start">
-              <AnimatedText text={"ABOUT ME"} className="mb-8 text-6xl" />
+              <AnimatedText text={"ABOUT ME"} className="mb-8 text-5xl" />
               <p className=" font-medium ">
                 Hi, I'm Sanaz Niamati, I'm a Frontend Web Developer building the
                 Front-end of Websites and Web Applications that leads to the
@@ -68,6 +69,7 @@ function about(props) {
               </div>
             </div> */}
           </div>
+          <Skills />
         </Layout>
       </main>
     </>
