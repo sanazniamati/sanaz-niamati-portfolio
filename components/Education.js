@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 // component
 import LiIcons from "../components/LiIcons";
 
-const Details = ({ position, company, companyLink, time, address, work }) => {
+const Details = ({ type, time, place, info }) => {
   const ref = useRef(null);
   return (
     <li
@@ -18,21 +18,16 @@ const Details = ({ position, company, companyLink, time, address, work }) => {
         whileInView={{ y: 0 }}
         transition={{ duration: 0.5, type: spring }}
       >
-        <h3 className=" capitalize font-bold text-2xl ">
-          {position}&nbsp;
-          <a href={companyLink} className=" text-primary capitalize ">
-            @{company}
-          </a>
-        </h3>
+        <h3 className=" capitalize font-bold text-2xl ">{type}</h3>
         <span className=" capitalize">
-          {time}| {address}
+          {time}| {place}
         </span>
-        <p className=" font-medium w-full">{work}</p>
+        <p className=" font-medium w-full">{info}</p>
       </motion.div>
     </li>
   );
 };
-function Experience() {
+function Education() {
   const ref = useRef(null);
   const { scrollYProgress } = useScroll({
     target: ref,
@@ -50,20 +45,11 @@ function Experience() {
         />
         <ul className=" w-full flex flex-col items-start justify-between ml-4 ">
           <Details
-            position="Remote - FrontEnd Developer"
-            company="Gitweld"
-            // companyLink={"www.google.com"}
-            time="June 2022-March 2023"
-            address="dusseldorf/Germany"
-            work="Drawing complex canvas graphics using React-Konva"
-          />
-          <Details
-            position="Remote - CafeTadris training course"
-            company="CafeTadris"
-            // companyLink={"www.google.com"}
-            time="November 2021-May 2023"
-            address="Tehran"
-            work="simolate Trob , Bitbarg , Terello"
+            type="Bachelor of IT Engineering"
+            cotimempany="Gitweld"
+            time="2009-2012"
+            place="Islamic Azad Univercity , Boushehr Iran"
+            // info=""
           />
         </ul>
       </div>
@@ -71,4 +57,4 @@ function Experience() {
   );
 }
 
-export default Experience;
+export default Education;

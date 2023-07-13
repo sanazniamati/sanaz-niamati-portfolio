@@ -5,6 +5,7 @@ import Layout from "../components/Layout.js";
 import AnimatedText from "../components/AnimatedText";
 import Skills from "../components/Skills.js";
 import Experience from "../components/Experience.js";
+import Education from "../components/Education.js";
 // image
 import profile from "../public/sanaz.jpeg";
 
@@ -72,6 +73,7 @@ function about(props) {
           </div>
           <Skills />
           <Experience />
+          <Education />
         </Layout>
       </main>
     </>
