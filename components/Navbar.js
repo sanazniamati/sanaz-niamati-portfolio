@@ -2,10 +2,11 @@
 import Link from "next/link";
 import { useRouter } from "next/router";
 import { motion } from "framer-motion";
+import { useTheme } from "next-themes";
+import { FaSun, FaRegMoon } from "react-icons/fa";
 
 // components
-import Logo from "../components/Logo";
-import { LinkedInIcon, GithubIcon, SunIcon } from "../components/Icons";
+import { LinkedInIcon, GithubIcon } from "../components/Icons";
 
 const CustomLink = ({ href, title, className = "" }) => {
   const router = useRouter();
@@ -13,9 +14,9 @@ const CustomLink = ({ href, title, className = "" }) => {
     <Link href={href} className={`${className} p-2 relative group`}>
       {title}
       <span
-        className={`h-[2px]  bg-green inline-block absolute left-0 -bottom-0.5 
-      group-hover:w-full group-hover:bg-green transition-[width] ease duration-300
-      ${router.asPath === href ? "w-full" : "w-0"}`}
+        className={`h-[2px] bg-dark dark:bg-light inline-block absolute left-0 -bottom-0.5 
+      group-hover:w-full  transition-[width] ease duration-300
+      ${router.asPath === href ? "w-full" : "w-0"} `}
       >
         &nbsp;
       </span>
@@ -24,8 +25,9 @@ const CustomLink = ({ href, title, className = "" }) => {
 };
 
 function Navbar() {
+  const { theme, setTheme } = useTheme();
   return (
-    <header className="w-full px-32 h-[56px]  font-medium flex justify-between items-center">
+    <header className="w-full px-32 h-[56px]  font-medium flex justify-between items-center dark:text-light">
       <nav>
         <CustomLink href="/" title={"Home"} className="mr-4" />
         <CustomLink href="/about" title={"About"} className="mx-4" />
@@ -34,15 +36,6 @@ function Navbar() {
       </nav>
 
       <nav className="flex justify-center items-center flex-wrap">
-        {/* <motion.a
-          href="https://twitter.com"
-          target="_blank"
-          whileHover={{ y: -2 }}
-          whileTap={{ scale: 0.9 }}
-          className="w-6 mr-3"
-        >
-          <TwitterIcon />
-        </motion.a> */}
         <motion.a
           href="https://www.linkedin.com/in/sanaz-niamati/"
           target="_blank"
@@ -63,7 +56,7 @@ function Navbar() {
           <GithubIcon />
         </motion.a>
 
-        <motion.a
+        {/* <motion.a
           href="/"
           target="_blank"
           whileHover={{ y: -2 }}
@@ -71,11 +64,16 @@ function Navbar() {
           className="w-6 ml-3"
         >
           <SunIcon />
+        </motion.a> */}
+        <motion.a
+          whileHover={{ y: -2 }}
+          whileTap={{ scale: 0.9 }}
+          className="w-6 mx-3"
+          onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
+        >
+          {theme === "dark" ? <FaRegMoon /> : <FaSun />}
         </motion.a>
       </nav>
-      {/* <div className=" absolute left-[50%] top-2 translate-x-[-50%]">
-        <Logo />
-      </div> */}
     </header>
   );
 }
