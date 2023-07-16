@@ -11,6 +11,7 @@ module.exports = {
       fontFamily: {
         mont: ["var(--font-mont)", ...fontFamily.sans],
       },
+      darkMode: "class",
       colors: {
         dark: "#1b1b1b",
         light: "#f5f5f5",
