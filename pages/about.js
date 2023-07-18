@@ -22,7 +22,7 @@ function about() {
             <div className=" col-span-3 flex flex-col items-center justify-start">
               <AnimatedText text={"ABOUT ME"} className="mb-8 text-5xl" />
               <p className=" font-medium ">
-                Hi,i&sbquo;m Sanaz Niamati, I&sbquo;m a Frontend Web Developer
+                Hi,i&apos;m Sanaz Niamati, I&apos;m a Frontend Web Developer
                 building the Front-end of Websites and Web Applications that
                 leads to the success of the overall product. Check out some of
                 my work in the Projects section. &sbquo;
@@ -35,7 +35,7 @@ function about() {
                 Development and Programming
               </p>
               <p className=" font-medium ">
-                I&sbquo;m looking for career opportunities where I can
+                I&apos;m looking for career opportunities where I can
                 contribute, learn and grow. If you have a good opportunity that
                 matches my skills and experience, do not hesitate to contact me.
               </p>
