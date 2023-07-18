@@ -14,7 +14,7 @@ function contact(props) {
         <meta name="description" content="any description" />
       </Head>
       <main className="flex w-full items-center justify-center ">
-        <Layout className="py-16 bg-white">
+        <Layout className="py-16 ">
           <div className="flex w-full bg-light">
             <div className=" w-1/2 flex flex-col items-center text-start">
               <AnimatedText text={"Contact Me"} className="my-8 text-5xl" />

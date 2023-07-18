@@ -22,7 +22,7 @@ export default function Home() {
         <link rel="icon" href="/sanaz.jpeg" />
       </Head>
       <div className="w-screen min-h-full flex flex-col ">
-        <main className="font-mont flex items-center text-dark w-full min-h-calc-(100vh-(footer-header)) lg:min-h-calc-22 dark:text-light  ">
+        <main className="font-mont flex items-center text-dark w-full min-h-calc-(100vh-(footer-header)) lg:min-h-calc-22   ">
           <div className="pt-0 w-full z-0   px-32 ">
             <div className="flex items-center justify-between w-full">
               <div className="w-1/2 mr-4 ">
@@ -44,7 +44,7 @@ export default function Home() {
                     href="/s.niamati-cv.pdf"
                     target="_blank"
                     className="flex items-center justify-center bg-dark text-light p-2.5 px-6 rounded-lg text-lg font-semibold border-dark border-2 border-solid
-                  hover:bg-light hover:text-dark hover:border-dark dark:bg-light dark:text-dark dark:hover:bg-red-700 "
+                  hover:bg-light hover:text-dark hover:border-dark "
                     download={true}
                   >
                     Resume <LinkArrow />
