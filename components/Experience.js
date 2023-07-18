@@ -19,7 +19,7 @@ const Details = ({ position, company, companyLink, time, address, work }) => {
         transition={{ duration: 0.5, type: spring }}
       >
         <h3 className=" capitalize font-bold text-2xl ">
-          {position}&nbsp;
+          {position};
           <a href={companyLink} className=" text-primary capitalize ">
             @{company}
           </a>
@@ -61,7 +61,7 @@ function Experience() {
             position="Remote - CafeTadris training course"
             company="CafeTadris"
             // companyLink={"www.google.com"}
-            time="November 2021-May 2023"
+            time="November 2021-May 2022"
             address="Tehran"
             work="simolate Trob , Bitbarg , Terello"
           />

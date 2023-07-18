@@ -35,9 +35,7 @@ function Education() {
   });
   return (
     <div className="my-32">
-      <h2 className="font-bold text-5xl mb-32 w-full text-center">
-        Experience
-      </h2>
+      <h2 className="font-bold text-5xl mb-32 w-full text-center">Education</h2>
       <div ref={ref} className="w-[75%] mx-auto relative ">
         <motion.div
           style={{ scaleY: scrollYProgress }}
