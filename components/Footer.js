@@ -14,9 +14,6 @@ function Footer(props) {
             sanaz-niamati
           </Link>
         </div>
-        <Link href="/" target={"_blank"}>
-          say Hello
-        </Link>
       </div>
     </footer>
   );

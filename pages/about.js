@@ -25,7 +25,7 @@ function about() {
                 Hi,i&apos;m Sanaz Niamati, I&apos;m a Frontend Web Developer
                 building the Front-end of Websites and Web Applications that
                 leads to the success of the overall product. Check out some of
-                my work in the Projects section. &sbquo;
+                my work in the Projects section.
               </p>
               <p className=" font-medium my-4">
                 I also like sharing content related to the stuff that I have
