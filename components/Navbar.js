@@ -1,14 +1,13 @@
 // library
+import { useState } from "react";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import { motion } from "framer-motion";
 import { useTheme } from "next-themes";
-import { FaSun, FaRegMoon } from "react-icons/fa";
+import { FaSun, FaRegMoon, FaLinkedin, FaGithub } from "react-icons/fa";
 
 // components
-import { LinkedInIcon, GithubIcon } from "../components/Icons";
 // import useThemeSwitcher from "./hooks/useThemeSwitcher";
-import { useState } from "react";
 
 const CustomLink = ({ href, title, className = "" }) => {
   const router = useRouter();
@@ -16,7 +15,8 @@ const CustomLink = ({ href, title, className = "" }) => {
     <Link href={href} className={`${className} p-2 relative group `}>
       {title}
       <span
-        className={`h-[2px] bg- transition-all duration-300 ease-out  inline-block absolute left-0 -bottom-0.5 
+        className={`h-[1px] inline-block bg-dark 
+        absolute left-0 -bottom-0.5
       group-hover:w-full  transition-[width] ease duration-300
       ${router.asPath === href ? "w-full" : "w-0"} `}
       >
@@ -58,7 +58,7 @@ function Navbar() {
   };
   // const [mode, setMode] = useThemeSwitcher();
   return (
-    <header className=" bg-red-200 w-full px-32 h-[58px] font-medium flex justify-between items-center relative ">
+    <header className=" w-full px-32 py-8 font-medium flex justify-between items-center relative ">
       <button
         onClick={handleClick}
         className="flex-col justify-center items-center hidden lg:flex "
@@ -95,7 +95,7 @@ function Navbar() {
             whileTap={{ scale: 0.9 }}
             className="w-6 mx-3"
           >
-            <LinkedInIcon />
+            <FaLinkedin className="w-6 h-6" />
           </motion.a>
 
           <motion.a
@@ -105,18 +105,9 @@ function Navbar() {
             whileTap={{ scale: 0.9 }}
             className="w-6 mx-3"
           >
-            <GithubIcon />
+            <FaGithub className="w-6 h-6" />
           </motion.a>
 
-          {/* <motion.a
-          href="/"
-          target="_blank"
-          whileHover={{ y: -2 }}
-          whileTap={{ scale: 0.9 }}
-          className="w-6 ml-3"
-        >
-          <SunIcon />
-        </motion.a> */}
           <motion.a
             whileHover={{ y: -2 }}
             whileTap={{ scale: 0.9 }}
@@ -130,9 +121,9 @@ function Navbar() {
             }
           >
             {theme === " transition-all duration-300 ease-out" ? (
-              <FaSun />
+              <FaSun className="w-6 h-6" />
             ) : (
-              <FaRegMoon />
+              <FaRegMoon className="w-6 h-6" />
             )}
           </motion.a>
         </nav>
