@@ -22,8 +22,9 @@ module.exports = {
       },
       minHeight: {
         "calc-22": "calc(100vh - 116px)",
-        "calc-(100vh-(footer-header))": "calc(100vh -116px)",
+        "calc-(100vh-(footer+header))": "calc(100vh -118px)",
       },
+
       backgroundImage: {
         circularLight:
           " repeating-radial-gradient(rgba(0,0,0,0.6) 2px, #ffffff 5px,#ffffff 100px);",
