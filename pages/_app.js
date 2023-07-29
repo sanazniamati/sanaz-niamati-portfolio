@@ -1,6 +1,6 @@
 import "@/styles/globals.css";
 import { Montserrat } from "next/font/google";
-// import { ThemeProvider } from "next-themes";
+import { ThemeProvider } from "next-themes";
 // component
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
@@ -14,9 +14,7 @@ export default function App({ Component, pageProps }) {
   return (
     <>
       {/* <ThemeProvider attribute="class"> */}
-      <main
-        className={`${montserrat.variable} font-mont bg-yellow-200 w-full min-h-full`}
-      >
+      <main className={`${montserrat.variable} font-mont w-full min-h-full`}>
         <Navbar />
         <Component {...pageProps} />
         <Footer />

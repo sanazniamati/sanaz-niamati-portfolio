@@ -30,6 +30,8 @@ module.exports = {
           " repeating-radial-gradient(rgba(0,0,0,0.6) 2px, #ffffff 5px,#ffffff 100px);",
       },
       screens: {
+        "3xl": "1600px",
+        // => @media (max-width: 1602px) { ... }
         "2xl": { max: "1535px" },
         // => @media (max-width: 1535px) { ... }
 

@@ -13,33 +13,36 @@ function contact(props) {
         <title>SanazNiamati | Contact Page</title>
         <meta name="description" content="any description" />
       </Head>
-      <main className="flex w-full items-center justify-center ">
-        <Layout className="py-16 ">
-          <div className="flex w-full bg-light">
-            <div className=" w-1/2 flex flex-col items-center text-start">
-              <AnimatedText text={"Contact Me"} className="my-8 text-5xl" />
-              <div className="  w-full">
+      <main className="flex w-full items-center justify-center 2xl:min-h-calc-22 3xl:min-h-calc-22 ">
+        <Layout className=" ">
+          <div className="flex w-full justify-center lg:flex-col">
+            <div className="w-1/2 flex flex-col items-center text-start lg:w-full">
+              <AnimatedText
+                text={"Contact Me"}
+                className="my-8 text-5xl lg:text-3xl lg:my-4"
+              />
+              <div className="w-full">
                 <div className="flex justify-center items-center p-4 ">
-                  <FaPhoneSquare className="h-12 w-12 pr-2 " />
+                  <FaPhoneSquare className="h-12 w-12 pr-2 lg:h-6" />
                   <a
                     href="tel:+989384997337"
-                    className=" font-semibold text-2xl"
+                    className=" font-semibold text-2xl lg:text-lg"
                   >
                     +98 938 499 7337
                   </a>
                 </div>
-                <div className="flex justify-center items-center ">
-                  <FaEnvelope className="h-12 w-12 pr-2" />
+                <div className="flex justify-center items-center lg:mx-2">
+                  <FaEnvelope className="h-12 w-12 pr-2 lg:mb-8 lg:h-8" />
                   <a
                     href="mailto:sanaz.niamati@yahoo.com"
-                    className=" font-semibold text-2xl"
+                    className=" font-semibold text-2xl lg:text-lg lg:mb-8 "
                   >
                     sanaz.niamati@yahoo.com
                   </a>
                 </div>
               </div>
             </div>
-            <form className=" bg-slate-200 w-1/2 p-16 ">
+            <form className=" bg-slate-200 w-1/2 p-16 lg:w-full">
               <input
                 className="w-full p-2 m-2 rounded"
                 type="text"

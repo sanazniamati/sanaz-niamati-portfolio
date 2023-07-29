@@ -31,17 +31,17 @@ function Education() {
   const ref = useRef(null);
   const { scrollYProgress } = useScroll({
     target: ref,
-    offset: [" start end", "center start"],
+    offset: ["start end", "center start"],
   });
   return (
     <div className="my-32">
       <h2 className="font-bold text-5xl mb-32 w-full text-center">Education</h2>
-      <div ref={ref} className="w-[75%] mx-auto relative ">
+      <div ref={ref} className="w-[75%] mx-auto relative">
         <motion.div
           style={{ scaleY: scrollYProgress }}
-          className=" absolute left-9 top-0 w-[4px] h-full bg-dark origin-top"
+          className="absolute left-9 top-0 w-[4px] h-full bg-dark origin-top"
         />
-        <ul className=" w-full flex flex-col items-start justify-between ml-4 ">
+        <ul className="w-full flex flex-col items-start justify-between ml-4">
           <Details
             type="Bachelor of IT Engineering"
             cotimempany="Gitweld"

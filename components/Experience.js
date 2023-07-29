@@ -18,16 +18,16 @@ const Details = ({ position, company, companyLink, time, address, work }) => {
         whileInView={{ y: 0 }}
         transition={{ duration: 0.5, type: spring }}
       >
-        <h3 className=" capitalize font-bold text-2xl ">
+        <h3 className="capitalize font-bold text-2xl">
           {position};
-          <a href={companyLink} className=" text-primary capitalize ">
+          <a href={companyLink} className="text-primary capitalize">
             @{company}
           </a>
         </h3>
-        <span className=" capitalize">
+        <span className="capitalize">
           {time}| {address}
         </span>
-        <p className=" font-medium w-full">{work}</p>
+        <p className="font-medium w-full">{work}</p>
       </motion.div>
     </li>
   );
@@ -36,19 +36,19 @@ function Experience() {
   const ref = useRef(null);
   const { scrollYProgress } = useScroll({
     target: ref,
-    offset: [" start end", "center start"],
+    offset: ["start end", "center start"],
   });
   return (
     <div className="my-32">
       <h2 className="font-bold text-5xl mb-32 w-full text-center">
         Experience
       </h2>
-      <div ref={ref} className="w-[75%] mx-auto relative ">
+      <div ref={ref} className="w-[75%] mx-auto relative">
         <motion.div
           style={{ scaleY: scrollYProgress }}
-          className=" absolute left-9 top-0 w-[4px] h-full bg-dark origin-top"
+          className="absolute left-9 top-0 w-[4px] h-full bg-dark origin-top"
         />
-        <ul className=" w-full flex flex-col items-start justify-between ml-4 ">
+        <ul className="w-full flex flex-col items-start justify-between ml-4">
           <Details
             position="Remote - FrontEnd Developer"
             company="Gitweld"
