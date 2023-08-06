@@ -1,10 +1,11 @@
+"use client";
 import { useState } from "react";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import { motion } from "framer-motion";
-import { useTheme } from "next-themes";
-import { FaSun, FaRegMoon, FaLinkedin, FaGithub } from "react-icons/fa";
+import { FaLinkedin, FaGithub } from "react-icons/fa";
 import Layout from "./Layout";
+import ThemeButton from "@/components/ThemeButton";
 
 const CustomLink = ({ href, title, className = "" }) => {
   const router = useRouter();
@@ -17,11 +18,9 @@ const CustomLink = ({ href, title, className = "" }) => {
     >
       {title}
       <span
-        className={`h-[1px] inline-block bg-dark 
-        absolute left-0 -bottom-0.5
-      group-hover:w-full transition-[width] ease-out duration-300 ${
-        router.asPath === href ? "w-full" : "w-0"
-      }`}
+        className={`h-1 inline-block bg-dark absolute left-0 -bottom-0.5 group-hover:w-full transition-[width] ease-out duration-300 ${
+          router.asPath === href ? "w-full" : "w-0"
+        }`}
       >
         &nbsp;
       </span>
@@ -43,11 +42,9 @@ const CustomMobileLink = ({ href, title, className = "", toggle }) => {
     >
       {title}
       <span
-        className={`h-[2px] bg-light dark:bg-dark duration-300 ease-out
-        inline-block absolute left-0 -bottom-0.5 
-      group-hover:w-full transition-[width] ${
-        router.asPath === href ? "w-full" : "w-0"
-      }`}
+        className={`h-[2px] bg-light dark:bg-dark duration-300 ease-out inline-block absolute left-0 -bottom-0.5 group-hover:w-full transition-[width] ${
+          router.asPath === href ? "w-full" : "w-0"
+        }`}
       >
         &nbsp;
       </span>
@@ -56,7 +53,6 @@ const CustomMobileLink = ({ href, title, className = "", toggle }) => {
 };
 
 function Navbar() {
-  const { theme, setTheme } = useTheme();
   const [isOpen, setIsOpen] = useState(false);
   const handleClick = () => {
     setIsOpen(!isOpen);
@@ -67,23 +63,23 @@ function Navbar() {
       <Layout className=" bg-white h-14 px-32 flex justify-between items-center relative">
         <button
           onClick={handleClick}
-          className="flex-col justify-center items-center hidden lg:flex"
+          className="flex-col z-1000 justify-center items-center hidden lg:flex"
         >
           <span
-            className={`bg-dark transition-all duration-300 ease-out block h-0.5 w-6 rounded-sm -traslate-y-0.5 ${
+            className={`bg-dark transition-all duration-300 ease-out block h-0.5 w-6 rounded-sm -translate-y-0.5 ${
               isOpen ? "rotate-45 translate-y-1" : "-translate-y-0.5"
             }`}
-          ></span>
+          />
           <span
             className={`bg-dark transition-all duration-300 ease-out block h-0.5 w-6 rounded-sm my-0.5 ${
               isOpen ? "opacity-0" : "opacity-100"
             }`}
-          ></span>
+          />
           <span
             className={`bg-dark transition-all duration-300 ease-out block h-0.5 w-6 rounded-sm traslate-y-0.5 ${
               isOpen ? "-rotate-45 -translate-y-1" : "translate-y-0.5"
             }`}
-          ></span>
+          />
         </button>
         <div className="w-full flex justify-between items-center lg:hidden">
           <nav>
@@ -113,19 +109,7 @@ function Navbar() {
             >
               <FaGithub className="w-6 h-6" />
             </motion.a>
-
-            <motion.a
-              whileHover={{ y: -2 }}
-              whileTap={{ scale: 0.9 }}
-              className="w-6 mx-3 sm:mx-1"
-              onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
-            >
-              {theme === " dark" ? (
-                <FaSun className="w-6 h-6" />
-              ) : (
-                <FaRegMoon className="w-6 h-6" />
-              )}
-            </motion.a>
+            <ThemeButton />
           </nav>
         </div>
       </Layout>
@@ -139,28 +123,20 @@ function Navbar() {
           animate={{ scale: 1, opacity: 1 }}
         >
           <nav className="flex flex-col justify-center  items-center">
-            <CustomMobileLink
-              href="/"
-              title={"Home"}
-              // className=""
-              toggle={handleClick}
-            />
+            <CustomMobileLink href="/" title={"Home"} toggle={handleClick} />
             <CustomMobileLink
               href="/about"
               title={"About"}
-              // className=""
               toggle={handleClick}
             />
             <CustomMobileLink
               href="/projects"
               title={"Projects"}
-              // className=""
               toggle={handleClick}
             />
             <CustomMobileLink
               href="/contact"
               title={"Contact"}
-              // className=""
               toggle={handleClick}
             />
           </nav>
@@ -185,19 +161,7 @@ function Navbar() {
             >
               <FaGithub className="text-light w-6 h-6 dark:text-light" />
             </motion.a>
-
-            <motion.a
-              whileHover={{ y: -2 }}
-              whileTap={{ scale: 0.9 }}
-              className="w-6 mx-3"
-              onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
-            >
-              {theme === "dark" ? (
-                <FaSun className="text-dark w-6 h-6 dark:text-light" />
-              ) : (
-                <FaRegMoon className="text-light w-6 h-6 dark:text-dark" />
-              )}
-            </motion.a>
+            <ThemeButton />
           </nav>
         </motion.div>
       ) : null}
