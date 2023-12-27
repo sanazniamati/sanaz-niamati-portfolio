@@ -31,7 +31,7 @@ const FeaturedProject = ({ type, title, summery, img, link, github }) => {
         <Image src={img} alt={title} className={"w-full h-46"} />
       </Link>
       <div className={"w-1/2 flex flex-col justify-between pl-6"}>
-        <span className={"text-primary font-medium text-xl"}> {type}</span>
+        {/* <span className={"text-primary font-medium text-xl"}> {type}</span> */}
         <Link
           href={link}
           target="_lank"
@@ -133,52 +133,48 @@ function Projects() {
 
             <div className="col-span-12">
               <FeaturedProject
-                title="Trob site simulation"
+                title="drawing on canvas"
                 img={widenedHyButt}
-                // summery="Trob site simulation Trob site simulation"
-                link="https://trob-nextjs.vercel.app/"
-                github="https://github.com/sanazniamati/torob_nextjs"
-                type="Feature Project"
-              />
-            </div>
-            <div className="col-span-6">
-              <Project
-                title="Trob site simulation"
-                img={bitbarg}
-                // summery="Trob site simulation Trob site simulation"
-                link="https://trob-nextjs.vercel.app/"
-                github="https://github.com/sanazniamati/torob_nextjs"
-                type="Feature Project"
-              />
-            </div>
-            <div className="col-span-6">
-              <Project
-                title="Trob site simulation"
-                img={todo}
-                // summery="Trob site simulation Trob site simulation"
-                link="https://trob-nextjs.vercel.app/"
-                github="https://github.com/sanazniamati/torob_nextjs"
-                type="Feature Project"
-              />
-            </div>
-            <div className="col-span-12">
-              <Project
-                title="Trob site simulation"
-                img={rk088}
-                summery="Trob site simulation Trob site simulation"
-                link="https://trob-nextjs.vercel.app/"
-                github="https://github.com/sanazniamati/torob_nextjs"
-                type="Feature Project"
+                link="https://github.com/sanazniamati/gitweldsn051"
+                github="https://github.com/sanazniamati/gitweldsn051"
               />
             </div>
             <div className="col-span-12">
               <FeaturedProject
-                title="Trob site simulation"
-                img={SteepFlankedSingleV}
-                summery="Trob site simulation Trob site simulation"
+                title="BitBarg site simulation"
+                img={bitbarg}
                 link="https://trob-nextjs.vercel.app/"
                 github="https://github.com/sanazniamati/torob_nextjs"
-                type="Feature Project"
+              />
+            </div>
+            <div className="col-span-12">
+              <FeaturedProject
+                title="TODO App"
+                img={todo}
+                // summery="Trob site simulation Trob site simulation"
+                link="https://trob-nextjs.vercel.app/"
+                github="https://github.com/sanazniamati/torob_nextjs"
+                // type="Feature Project"
+              />
+            </div>
+            <div className="col-span-12">
+              <FeaturedProject
+                title="drawing on canvas"
+                img={rk088}
+                summery="Trob site simulation Trob site simulation"
+                link="https://github.com/sanazniamati/projectRK088"
+                github="https://github.com/sanazniamati/projectRK088"
+                // type="Feature Project"
+              />
+            </div>
+            <div className="col-span-12">
+              <FeaturedProject
+                title="drawing on canvas"
+                img={SteepFlankedSingleV}
+                summery="Trob site simulation Trob site simulation"
+                link="https://github.com/sanazniamati/gitweldsn051/"
+                github="https://github.com/sanazniamati/gitweldsn051"
+                // type="Feature Project"
               />
             </div>
           </div>
